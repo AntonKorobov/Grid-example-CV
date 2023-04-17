@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.body {
+  background-color: #edecf1;
+}
+
+.h1 {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.h2 {
+  color: #868686;
+  margin-bottom: 1rem;
+}
+
+.h3 {
+  color: #868686;
+  margin: 1rem 0;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+
+.wrapper {
+  font-size: 1.5rem;
+  margin: 0 auto;
+  min-width: 320px;
+}
+
+@media (min-width: 640px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 80px auto 80px auto 80px;
+    grid-template-areas: "l l l h h h h h h h h h" "p p p w w w w w w w w w" "d d d s s s s s s s s s" "a a a m m m m m m m m m" "a a a f f f f f f f f f";
+  }
+}
+.logo {
+  grid-area: l;
+}
+
+.header {
+  grid-area: h;
+}
+
+.preview {
+  grid-area: p;
+}
+
+.burger-menu {
+  grid-area: b;
+}
+
+.aside {
+  grid-area: a;
+}
+
+.download-section {
+  grid-area: d;
+}
+
+.slider-window {
+  grid-area: w;
+}
+
+.slider {
+  grid-area: s;
+}
+
+.main-info {
+  grid-area: m;
+}
+
+.footer {
+  grid-area: f;
+}
+
+.container {
+  padding: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 2rem;
+  }
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c83734;
+}
+
+.logo__h1 {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  padding: 2rem;
+}
+
+.header {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.burger-menu {
+  background-color: #ffffff;
+  border-left: solid 1px #c0c0c0;
+}
+
+.header-nav {
+  margin: 2rem 0;
+}
+
+.header-nav__list {
+  display: flex;
+  gap: 2rem;
+}
+
+.header-nav-link {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #868686;
+}
+.header-nav-link:hover {
+  border-bottom: 3px solid #c83734;
+}
+
+.aside {
+  background-color: #031a2c;
+}
+
+.nav {
+  background-color: #ffffff;
+  border-left: solid 1px #c0c0c0;
+  border-top: solid 1px #c0c0c0;
+}
+
+.preview {
+  display: flex;
+  align-items: center;
+  background-color: #031a2c;
+}
+
+.preview-photo {
+  display: none;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .preview-photo {
+    display: block;
+  }
+}
+.download-section {
+  background-color: #182b3c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.download-section__button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #c0c0c0;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  padding: 2rem;
+}
+.download-section__button:hover {
+  color: #ffffff;
+}
+
+.contacts__title {
+  color: #868686;
+  font-size: 1.4rem;
+}
+
+.contacts__text {
+  color: #c0c0c0;
+}
+
+.slider-window {
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+}
+
+.slider-window__img-container {
+  width: 100%;
+}
+
+.slider-window__img {
+  display: block;
+  width: 100%;
+}
+
+.slider-window__wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  box-sizing: border-box;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: rgba(3, 26, 44, 0.5);
+  transition: 1s;
+}
+.slider-window__wrapper:hover {
+  transform: translate(100%);
+}
+
+.slider-window__title {
+  color: #ffffff;
+}
+
+.slider-window__description {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #ffffff;
+}
+
+.slider {
+  display: flex;
+  overflow-x: hidden;
+  height: 100px;
+}
+
+@media (min-width: 640px) {
+  .slider {
+    height: auto;
+  }
+}
+.slider-img-container {
+  min-width: 50%;
+}
+
+@media (min-width: 640px) {
+  .slider-img-container {
+    min-width: 20%;
+  }
+}
+.slider__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main-info > .section:nth-child(2n+1) {
+  background-color: #edecf1;
+}
+.main-info > .section:nth-child(2n) {
+  background-color: #ffffff;
+}
+
+@media (min-width: 640px) {
+  .main-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1rem;
+  }
+}
+.footer {
+  background-color: #c83734;
+  display: flex;
+  align-items: center;
+}
+
+.footer__description {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}/*# sourceMappingURL=my_CV.css.map */
